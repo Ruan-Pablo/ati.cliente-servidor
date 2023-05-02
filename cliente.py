@@ -30,4 +30,4 @@ while True:
     print(f'Retorno: {data.decode()} \nFim')
 
     s.close()
-    time.sleep(0.5)
+    time.sleep(10)
