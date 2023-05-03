@@ -5,6 +5,7 @@ Trablho de Redes
 Ruan Pablo de Sousa Estácio
 Riane Carla Gomes Alvez
 
+Servidor
 '''
 import socket
 
@@ -18,6 +19,8 @@ def verifica_impa_par(dado):
             dado = "IMPAR"
         else:
             dado = "PAR"
+    else:
+        dado = ''.join(random.choices('abcdefghijklmnopqrstuvwxyz', k=len(str(dado))))
     return dado
 
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
@@ -33,7 +36,7 @@ while True:
 
     dado_tratado = verifica_impa_par(data)
     print(f"----------------------------------------")
-    print(F"Mensagem recebida: {dado_tratado}")
+    print(F"Mensagem recebida: {data.decode()}")
     
     conn.sendall(str.encode(dado_tratado))
     print("Resposta retornada!")
