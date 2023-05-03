@@ -5,6 +5,7 @@ Trablho de Redes
 Ruan Pablo de Sousa Estácio
 Riane Carla Gomes Alvez
 
+Cliente
 '''
 import socket
 import random
